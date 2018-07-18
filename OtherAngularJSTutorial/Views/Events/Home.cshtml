@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" ng-app="eventModule" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hello World with AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="~/Scripts/Events/eventModule.js"></script>
+    <script src="~/Scripts/Events/eventController.js"></script>
+</head>
+<body ng-app="" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
+
+    <div class="container">
+        <h2>Talk Details</h2>
+        <div class="row"  ng-controller="eventController">
+            <table class="table table-condensed table-hover">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Speaker</th>
+                    <th>Venue</th>
+                    <th>Duration</th>
+                </tr>
+                <tr ng-repeat="talk in talks">
+                    <td> {{talk.id}} </td>
+                    <td> {{talk.name}} </td>
+                    <td> {{talk.speaker}} </td>
+                    <td> {{talk.venue}} </td>
+                    <td> {{talk.duration}} </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
